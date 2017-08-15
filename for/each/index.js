@@ -5,6 +5,8 @@ module.exports = function forEach(iterable, fn) {
     var i = 0,
         length = iterable.length;
     for (; i < length; i++) {
-        fn(iterable[i], i, iterable);
+        if (iterable.hasOwnProperty(i)) {
+            fn(iterable[i], i, iterable);
+        }
     }
 };
