@@ -8,28 +8,10 @@ module.exports = passed ? function forOf(iterable, fn) {
         fn(value, iterable);
     }
 } : function forOf(iterable, fn) {
-    if (!iterable) {
-        return;
-    }
-    var i = 0,
-        key = getKey(iterable),
-        length = iterable[key];
-    for (; i < length; i++) {
-        fn(iterable[i], iterable);
-    }
+    forEach(iterable, function (value, index, iterable) {
+        fn(value, iterable);
+    });
 };
-
-function getKey(iterable) {
-    var key;
-    if (iterable[HAS]) {
-        if (iterable[HAS]('length')) {
-            key = 'length';
-        } else if (iterable[HAS]('size')) {
-            key = 'size';
-        }
-    }
-    return key;
-}
 
 function test() {
     try {
