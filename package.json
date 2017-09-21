@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/timelaps/hacks#readme",
   "devDependencies": {
-    "@timelaps/batterie": "^1.0.71"
+    "@timelaps/batterie": "^1.0.73"
   }
 }
