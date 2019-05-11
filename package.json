@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf ./dist ./coverage",
-    "test": "npm run build && jest",
+    "test": "npm run build && jest --runInBand",
     "share": "npm version patch && git push && npm publish"
   },
   "repository": {
