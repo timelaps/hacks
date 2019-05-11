@@ -1,6 +1,6 @@
 {
   "name": "@timelaps/hacks",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "a small set of backward compatable functions",
   "main": "index.js",
   "scripts": {
