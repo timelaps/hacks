@@ -2,7 +2,7 @@
   "name": "@timelaps/hacks",
   "version": "1.0.8",
   "description": "a small set of backward compatable functions",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf ./dist ./coverage",
