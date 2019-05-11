@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
+    "test": "jest",
     "share": "npm version patch && git push && npm publish"
   },
   "repository": {
@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/timelaps/hacks#readme",
   "devDependencies": {
-    "@timelaps/batterie": "^1.0.73"
+    "@types/jest": "^24.0.12",
+    "jest": "^24.8.0",
+    "jest-chain": "^1.1.2",
+    "jest-extended": "^0.11.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
   }
 }
