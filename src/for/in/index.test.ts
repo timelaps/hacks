@@ -1,4 +1,4 @@
-import { forIn } from './'
+import { forIn } from './index'
 describe('forIn', () => {
   Class.prototype = {
     one: 0,

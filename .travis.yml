@@ -1,16 +1,18 @@
 language: node_js
+cache:
+  npm: true
+  directories:
+  - "$HOME/.npm"
 node_js:
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
+- 6
+- 7
+- 8
+- 9
+- 10
+- 11
 git:
   depth: 1
-branches:
-  only:
-    - master
-after_success:
-  - "npm run coveralls"
+install:
+- npm ci
+before_install:
+- npm i -g npm@latest

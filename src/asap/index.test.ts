@@ -1,16 +1,12 @@
 declare var setTimeout: Function
-import { asap } from './'
+import { asap } from './index'
 
 describe('asap', () => {
   test('runs async', (done) => {
-    expect.assertions(3)
+    expect.assertions(2)
     let count = 0
     asap(() => {
       expect(count).toBe(1)
-      count += 1
-    })
-    setTimeout(() => {
-      expect(count).toBe(2)
       done()
     })
     expect(count).toBe(0)

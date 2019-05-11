@@ -1,4 +1,4 @@
-import { toStringResult } from './'
+import { toStringResult } from './index'
 describe('toStringResult', () => {
   test('teting inputs', () => {
     expect(toStringResult).toBeInstanceOf(Function)
