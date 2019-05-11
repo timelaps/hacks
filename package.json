@@ -1,10 +1,12 @@
 {
   "name": "@timelaps/hacks",
   "version": "1.0.7",
-  "description": "",
+  "description": "a small set of backward compatable functions",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
+    "test": "jest --runInBand",
     "share": "npm version patch && git push && npm publish"
   },
   "repository": {
@@ -19,10 +21,13 @@
   },
   "homepage": "https://github.com/timelaps/hacks#readme",
   "devDependencies": {
+    "@babel/types": "^7.4.4",
     "@types/jest": "^24.0.12",
     "jest": "^24.8.0",
     "jest-chain": "^1.1.2",
     "jest-extended": "^0.11.1",
+    "jest-puppeteer": "^4.1.1",
+    "puppeteer": "^1.15.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
   }

@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "allowJs": true,
+    "lib": ["es2015"],
+    "declaration": true,
     "target": "es5"
   },
+  "exclude": [
+    "node_modules",
+    "./src/**/*.test.ts"
+  ],
   "include": [
     "./src/**/*.ts"
   ]

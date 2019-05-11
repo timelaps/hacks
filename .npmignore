@@ -3,3 +3,4 @@
 .gitignore
 coverage/*
 node_modules/*
+src/*
