@@ -3,7 +3,6 @@ cache:
   npm: true
   directories:
   - "$HOME/.npm"
-  - "$HOME/node_modules"
 node_js:
   - 6
   - 7
