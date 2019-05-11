@@ -15,4 +15,4 @@ git:
 install:
 - npm ci
 before_install:
-  - npm i -g npm@latest
+- npm i -g npm@latest
