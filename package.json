@@ -1,12 +1,13 @@
 {
   "name": "@timelaps/hacks",
-  "version": "1.0.11",
+  "version": "2.0.0",
   "description": "a small set of backward compatable functions",
   "main": "dist/index.js",
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf ./dist ./coverage",
     "test": "npm run build && jest --runInBand",
+    "badges": "jest-coverage-badges",
     "share": "npm version patch && git push && npm publish"
   },
   "repository": {
@@ -22,7 +23,7 @@
   "homepage": "https://github.com/timelaps/hacks#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm t && jest-coverage-badges"
+      "pre-commit": "npm t && npm run badges"
     }
   },
   "devDependencies": {
