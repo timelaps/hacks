@@ -9,7 +9,7 @@
     "compile": "tsc",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "clean": "rm -rf ./dist ./coverage",
-    "test": "npm run build && jest --runInBand && coverage-shield",
+    "test": "npm run build && jest --runInBand --coverage && coverage-shield --reportFile=coverage/clover.xml --destinationDir=coverage",
     "share": "npm version patch && git push && npm publish"
   },
   "repository": {
