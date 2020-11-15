@@ -58,4 +58,4 @@ typings/
 .env
 dist/
 coverage/
-!coverage/badge-*.svg
+!coverage/coverage.svg
