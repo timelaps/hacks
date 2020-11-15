@@ -1,4 +1,3 @@
-declare var setTimeout: Function
 import { asap } from './index'
 
 describe('asap', () => {
