@@ -4,7 +4,8 @@
   "description": "a small set of backward compatable functions",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm run clean && npm run lint && npm run compile",
+    "prebuild": "npm run clean",
+    "build": "npm run lint && npm run compile",
     "compile": "tsc",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "clean": "rm -rf ./dist ./coverage",
