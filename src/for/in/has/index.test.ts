@@ -11,10 +11,9 @@ describe('forOwn', () => {
   })
   test('iterates over objects and any available keys on the prototype', () => {
     expect.assertions(2)
-    var previous = 0
-    var values = []
-    var indexes = []
-    forOwn(new Class(), (value, index) => {
+    var values: any[] = []
+    var indexes: any[] = []
+    forOwn(new (Class as any)(), (value, index) => {
       values.push(value)
       indexes.push(index)
     })

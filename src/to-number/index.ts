@@ -1,3 +1,3 @@
-export function toNumber(item) {
+export function toNumber(item: any) {
   return +item
 }

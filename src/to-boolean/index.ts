@@ -1,3 +1,3 @@
-export function toBoolean(item) {
+export function toBoolean(item: any) {
   return !!item
 }
