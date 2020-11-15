@@ -1,29 +1,29 @@
 import { forEach } from '../each'
-var passed = test()
-var HAS = 'hasOwnProperty'
+const passed = test()
+const HAS = 'hasOwnProperty'
 const forOf = passed ? forOfShim : forOfHandler
 export {
   forOf
 }
 
-function forOfHandler(iterable, fn) {
-  forEach(iterable, (value, index, iterable) => {
-    fn(value, iterable)
+function forOfHandler(iterable: [] | string, fn: (value: any, iterable: [] | string) => void) {
+  forEach(iterable, (value: any, index: number, iterating: [] | string) => {
+    fn(value, iterating)
   })
 }
 
-function forOfShim(iterable, fn) {
+function forOfShim(iterable: [] | string, fn: (value: any, iterable: [] | string) => void) {
   if (!iterable) {
     return
   }
-  for (var value of iterable) {
+  for (const value of iterable) {
     fn(value, iterable)
   }
 }
 
 function test() {
   try {
-    for (var value of [true]) {
+    for (const value of [true]) {
       return value
     }
   } catch (e) {

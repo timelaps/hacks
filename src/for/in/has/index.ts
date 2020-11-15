@@ -1,8 +1,8 @@
 import { forIn } from '../'
-export function forOwn(object, fn) {
-  forIn(object, function (value, key) {
-    if (object.hasOwnProperty(key)) {
-      fn(value, key, object)
+export function forOwn(obj: {[key:string]:any}, fn: (value: any, key: string, obj: object) => void) {
+  forIn(obj, (value, key) => {
+    if (obj.hasOwnProperty(key)) {
+      fn(value, key, obj)
     }
   })
 }
