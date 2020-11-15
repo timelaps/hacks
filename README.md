@@ -2,4 +2,4 @@
 
 ### Coverage
 
-![Coverage](./coverage/coverage.svg, "its happening")
+![Coverage](./coverage/coverage.svg "its happening")
